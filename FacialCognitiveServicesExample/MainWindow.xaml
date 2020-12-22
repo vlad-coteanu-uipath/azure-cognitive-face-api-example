@@ -1,0 +1,28 @@
+﻿<Window x:Class="FacialCognitiveServicesExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FacialCognitiveServicesExample"
+        mc:Ignorable="d"
+        Title="Facial Cognitive Solution" Height="500" Width="800">
+    <Grid HorizontalAlignment="Right" Margin="0,0,-0.4,-10" Width="794">
+        <Label Content="The purpose of this application is to show how powerful Azure Cognitive Services are. The example presented here is a possible part of &#xD;&#xA;an authentication module based on facial recognition and emotion detection. How does it work?&#xD;&#xA;&#xD;&#xA;1. The user should upload 3 different images, each of the images requiring him/her to mimic a certain emotion.&#xD;&#xA;2. After uploading the images, if the same user is present in all of them and the emotions are mimed correctly, then the service should&#xD;&#xA;prompt that the task was successfully executed." HorizontalAlignment="Center" Margin="30,34,30.6,0" VerticalAlignment="Top" Width="733" Height="121"/>
+
+        <Image x:Name="LeftImage" HorizontalAlignment="Left" Height="134" Margin="30,169,0,0" VerticalAlignment="Top" Width="212" Source="/images/addImage.png"/>
+        <Label x:Name="LeftLabel" Content="Please upload an image" HorizontalAlignment="Left" Margin="30,323,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="LeftButton" Content="Upload Photo" HorizontalAlignment="Left" Margin="45,350,0,0" VerticalAlignment="Top" Width="100" Click="LeftButton_Click"/>
+
+        <Image x:Name="RightImage" HorizontalAlignment="Right" Height="134" Margin="0,169,30,0" VerticalAlignment="Top" Width="212" Source="/images/addImage.png"/>
+        <Label x:Name="RightLabel" Content="Please upload an image" HorizontalAlignment="Right" Margin="0,323,10,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="RightButton" Content="Upload Photo" HorizontalAlignment="Right" Margin="0,350,45,0" VerticalAlignment="Top" Width="100" Click="RightButton_Click"/>
+
+        <Image x:Name="CenterImage" HorizontalAlignment="Center" Height="134" Margin="291,169,291,0" VerticalAlignment="Top" Width="212" Source="/images/addImage.png"/>
+        <Label x:Name="CenterLabel" Content="Please upload an image" HorizontalAlignment="Center" Margin="322,323,322,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="CenterButton" Content="Upload Photo" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="100" Click="CenterButton_Click"/>
+        
+        <Button x:Name="ResetButton" Content="Reset images" HorizontalAlignment="Center" Margin="291,390,291,0" VerticalAlignment="Top" Width="212" Click="ResetButton_Click"/>
+        <Button x:Name="ValidateButton" Content="Validate" HorizontalAlignment="Center" Margin="291,419,291,0" VerticalAlignment="Top" Width="212" Click="ValidateButton_Click"/>
+
+    </Grid>
+</Window>
